@@ -38,8 +38,6 @@ const appRouter = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
-      <RouterProvider router={appRouter} />
-    </HashRouter>
+    <RouterProvider router={appRouter} />
   </React.StrictMode>
 );
