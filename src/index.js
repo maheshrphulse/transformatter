@@ -5,7 +5,7 @@ import "./styles/general.css";
 import "./styles/header.css";
 import "./styles/main.css";
 import "./styles/footer.css";
-import { createBrowserRouter, RouterProvider, HashRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "../src/components/Main";
 import About from "../src/components/About";
 import Contact from "../src/components/Contact";
