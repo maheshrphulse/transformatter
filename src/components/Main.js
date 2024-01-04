@@ -1,0 +1,75 @@
+import { useEffect, useState } from "react";
+import { transFormatter, copyContent, clearInput } from "../utilities/Utils";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import ClearIcon from "@mui/icons-material/Clear";
+
+
+export default function Main() {
+  
+  useEffect(() => {
+    const userInputDataFromLS = localStorage.getItem("userInputDataFromLS");
+    document.getElementById("input-textarea").value = userInputDataFromLS ? userInputDataFromLS : "";
+  }, []);
+
+  return (
+    <main>
+      <h1>XML/JSON Formatter & Converter</h1>
+      <p>
+        Paste your XML or JSON in the first text area, and see the formatted
+        result below:
+      </p>
+      <section className="hero-section">
+        <div className="textarea-container">
+          <label htmlFor="input-textarea">Input XML/JSON:</label>
+          <textarea
+            id="input-textarea"
+            placeholder="Paste XML or JSON here"
+            onChange={(event) =>
+              transFormatter(event.target.value)
+            }></textarea>
+          <div className="icons-container">
+            <ClearIcon
+              className="clear-icon"
+              onClick={() => {
+                clearInput();
+              }}
+            />
+          </div>
+        </div>
+        <div className="buttons-container">
+          <button
+            onClick={() => {
+              transFormatter(document.getElementById("input-textarea").value);
+            }}>
+            Format
+          </button>
+          <button
+            onClick={() => {
+              transFormatter(document.getElementById("input-textarea").value);
+            }}>
+            Convert
+          </button>
+        </div>
+        <div className="textarea-container">
+          <label htmlFor="output-textarea">Formatted Output:</label>
+          <textarea id="output-textarea" 
+           readOnly>
+          </textarea>
+          <div className="icons-container">
+            <a>
+              <ContentCopyIcon
+                className="copy-icon"
+                onClick={() => {
+                  copyContent();
+                }}
+              />
+            </a>
+            <span className="active tool-tip">
+              copied
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+};
