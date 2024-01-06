@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/transformatter/static/css/main.35ef131e.css",
-    "main.js": "/transformatter/static/js/main.07e26408.js",
-    "index.html": "/transformatter/index.html",
-    "main.35ef131e.css.map": "/transformatter/static/css/main.35ef131e.css.map",
-    "main.07e26408.js.map": "/transformatter/static/js/main.07e26408.js.map"
+    "main.css": "/static/css/main.35ef131e.css",
+    "main.js": "/static/js/main.07e26408.js",
+    "index.html": "/index.html",
+    "main.35ef131e.css.map": "/static/css/main.35ef131e.css.map",
+    "main.07e26408.js.map": "/static/js/main.07e26408.js.map"
   },
   "entrypoints": [
     "static/css/main.35ef131e.css",
