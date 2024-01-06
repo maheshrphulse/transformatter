@@ -6,7 +6,6 @@ export default function Header() {
       <nav className="navbar">
         <pre className="logo">
           <Link to="/">
-            {/* {"[{ : },  </>].transFormatter()"} */}
             {"["}<span>{"{ : }"}</span>{", "}<span>{"</>"}</span>{"].transFormatter()"}
           </Link>
         </pre>
