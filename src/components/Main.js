@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { transFormatter, copyContent, clearInput } from "../utilities/Utils";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import ClearIcon from "@mui/icons-material/Clear";
@@ -28,22 +28,24 @@ export default function Main() {
               transFormatter(event.target.value)
             }></textarea>
           <div className="icons-container">
-            <ClearIcon
-              className="clear-icon"
-              onClick={() => {
-                clearInput();
-              }}
-            />
+            <button>
+              <ClearIcon
+                className="clear-icon"
+                onClick={() => {
+                  clearInput();
+                }}
+              />
+            </button>
           </div>
         </div>
         <div className="buttons-container">
-          <button
+          <button className="btn"
             onClick={() => {
               transFormatter(document.getElementById("input-textarea").value);
             }}>
             Format
           </button>
-          <button
+          <button className="btn"
             onClick={() => {
               transFormatter(document.getElementById("input-textarea").value);
             }}>
@@ -56,14 +58,14 @@ export default function Main() {
            readOnly>
           </textarea>
           <div className="icons-container">
-            <a>
+            <button>
               <ContentCopyIcon
                 className="copy-icon"
                 onClick={() => {
                   copyContent();
                 }}
               />
-            </a>
+            </button>
             <span className="active tool-tip">
               copied
             </span>

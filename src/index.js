@@ -7,7 +7,6 @@ import "./styles/header.css";
 import "./styles/main.css";
 import "./styles/footer.css";
 
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/transformatter">

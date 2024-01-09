@@ -60,7 +60,7 @@ textarea {
   margin: 2vw;
 }
 
-button {
+.btn {
   background-color: var(--THEME_COLOR);
   color: white;
   border: none;
@@ -70,7 +70,7 @@ button {
   margin-bottom: 30px;
 }
 
-button:hover {
+.btn:hover {
   background-color: #ddd;
   color: black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -118,4 +118,9 @@ button:hover {
     align-items: center;
     height: 88.5vh;
   }
+}
+
+button{
+  background: transparent;
+  border-style: none;
 }
