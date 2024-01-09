@@ -28,12 +28,11 @@ export default function Main() {
               transFormatter(event.target.value)
             }></textarea>
           <div className="icons-container">
-            <button>
+            <button onClick={() => {
+                  clearInput();
+                }}>
               <ClearIcon
                 className="clear-icon"
-                onClick={() => {
-                  clearInput();
-                }}
               />
             </button>
           </div>
@@ -58,12 +57,11 @@ export default function Main() {
            readOnly>
           </textarea>
           <div className="icons-container">
-            <button>
+            <button onClick={() => {
+                  copyContent();
+                }}>
               <ContentCopyIcon
                 className="copy-icon"
-                onClick={() => {
-                  copyContent();
-                }}
               />
             </button>
             <span className="active tool-tip">
